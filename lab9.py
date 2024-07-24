@@ -1,13 +1,13 @@
-def encode(password):
+def decode(password):
     new = ""
     for i in password:
-        if i == "7":
-            new += "0"
-        elif i == "8":
-            new += "1"
-        elif i == "9":
-            new += "2"
+        if i == "0":
+            new += "7"
+        elif i == "1":
+            new += "8"
+        elif i == "2":
+            new += "9"
         else:
-            new += str(int(i) + 3)
+            new += str(int(i) - 3)
 
     return new
